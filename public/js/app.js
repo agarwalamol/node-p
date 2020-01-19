@@ -1,7 +1,3 @@
-console.log('Loading from client side!')
-
-
-
 const weatherForm = document.querySelector('form')
 const messageOne = document.querySelector('#messageOne')
 const messageTwo = document.querySelector('#messageTwo')
