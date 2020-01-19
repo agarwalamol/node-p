@@ -15,7 +15,7 @@ if(error){
 }
 else{
     // callback(undefined, response.body.daily.data[0].summary+' It is currently ' +response.body.currently.temperature+ ' degrees Celsius out. There is '+response.body.currently.precipProbability+ ' % chance of rain.')
-    callback(undefined, body.daily.data[0].summary+' It is currently ' +body.currently.temperature+ ' degrees Celsius out. There is '+body.currently.precipProbability+ ' % chance of rain.')
+    callback(undefined, body.daily.data[0].summary+' It is currently ' +body.currently.temperature+ ' degrees Celsius out. There is '+body.currently.precipProbability+ ' % chance of rain. The UV Index is '+body.daily.data[0].uvIndex+'.')
 }
 })
 }
