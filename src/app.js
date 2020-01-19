@@ -10,6 +10,7 @@ const forecast = require('../src/utils/forecast.js')
 
 
 const app = express()           //generate application
+const port = process.env.PORT || 3000  // set port dynamically for herrroku or 3000 when running locally
 const publicirectoryPath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
 const partialsPath = path.join(__dirname,'../templates/partials')
@@ -129,6 +130,6 @@ app.get('*', (req, res)=>{
 })
 
 
-app.listen(3000,()=>{
-    console.log('Server is up on port 3000')
+app.listen(port,()=>{
+    console.log('Server is up on port '+port)
 })

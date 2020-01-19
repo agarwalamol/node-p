@@ -12,7 +12,8 @@ weatherForm.addEventListener('submit',(e)=>{
     messageOne.textContent = 'Loading..'
     messageTwo.textContent = ''             //to remove second paragraph after new search
 
-    fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+    //fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+        fetch('/weather?address='+location).then((response)=>{  //removed localhost for deploying on heroku
     response.json().then((data) =>{
         if(data.error){
             messageOne.textContent =data.error
