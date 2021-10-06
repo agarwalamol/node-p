@@ -6,7 +6,7 @@ const geocode =(address, callback)=>{
 
     const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+address+'.json?&limit=2&access_token=pk.eyJ1IjoiYW1vbGFnYXJ3YWxlY2UiLCJhIjoiY2s0MHJyNzByMDB6NjNlbjA0d2ZtdzM3cSJ9.e1GMMsN3oGhJWp-YnQUUmw'
     // request({url: url, json: true}, (error, response)=>{
-        request({url: url, json: true}, (error, {body})=>{     // using object destructuring
+        request({url: url, json: true}, (error, {body}={})=>{     // using object destructuring
     if(error){
         callback('Connectivity failure! Please check your network connection.',undefined)
     }
